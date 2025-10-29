@@ -1,0 +1,5 @@
+rootProject.name = 'DDD-6'
+include 'flight-service'
+include 'payment-service'
+include 'notification-service'
+include 'reservation-service'
