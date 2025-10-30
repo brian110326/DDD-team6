@@ -16,7 +16,11 @@ public class ReservationService {
 
 	@Transactional
 	public Long createReservation() {
+		//예약정보(항공편, 운임, 일정 등)에 대한 검증
+
 		//예약 정보 등록
+
+		//예약 등록 완료 이벤트 발행 (결제 컨텍스트가 소비)
 		return null;
 	}
 
@@ -30,14 +34,4 @@ public class ReservationService {
 		return null;
 	}
 
-	@Transactional
-	public void confirmReservation() {
-		// 예약 정보 조회 및 상태 확인 (PENDING 상태여야 확정 가능)
-
-		// 결제 완료 여부 확인 (Payment API 조회)
-
-		// 예약 확정 처리 (status를 CONFIRMED로 변경)
-
-		// 예약 확정 이벤트 발행 (항공권 발급, 알림 전송 이벤트)
-	}
 }

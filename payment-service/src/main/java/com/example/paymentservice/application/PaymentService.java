@@ -22,7 +22,10 @@ public class PaymentService {
     private final ReservationClient reservationClient;
 
     //초기 결제 정보 생성
+    //Todo 커맨드 네이밍 수정
     public void requestPayment(RequestPaymentCommand command) {
+        //Todo 예약 등록 이벤트에 의해 동작하도록 구성(핸들러에)
+
         //1. 결제 요청 커맨드를 통한 결제 엔티티 생성
 
         //2. 결제 요청 정보 저장
@@ -31,7 +34,7 @@ public class PaymentService {
     //결제 승인 처리
     @Transactional
     public void approvePayment(VerifyPaymentCommand command) {
-        //1. 예약 번호로 결제 정보 조회
+        //1. 예약 번호로 결제 정보 조회 (PG사 종류, 내역 키값 X)
 
         //2. command에 담긴 PG사 결제 식별 코드로 결제 내역 조회
 

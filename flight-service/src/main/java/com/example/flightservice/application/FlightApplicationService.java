@@ -17,9 +17,10 @@ public class FlightApplicationService {
 
 	private final FlightDomainService flightDomainService;
 
-	public List<Flight> searchFlights(CountryInfo origin, CountryInfo destination, Schedule schedule) {
+	public List<Flight> searchFlights() {
 		// Domain Service 호출
-		return flightDomainService.searchFlights(origin, destination, schedule);
+		// Flight와 FlightOperation을 조회하여 조건에 맞는 리스트 반환
+		return flightDomainService.searchFlights();
 	}
 
 }

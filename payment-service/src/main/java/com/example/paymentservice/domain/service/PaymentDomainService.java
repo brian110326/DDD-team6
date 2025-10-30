@@ -6,6 +6,7 @@ import com.example.paymentservice.domain.vo.PaymentStatus;
 
 public class PaymentDomainService {
 
+    //Todo Domain안에 위치해야 하는 기능들
     public void approvePayment(Payment payment, String pgTransactionId, Money amount) {
         if (!payment.getPaymentStatus().canBePaid()) {
             throw new IllegalStateException("결제 승인 불가 상태: " + payment.getPaymentStatus());
