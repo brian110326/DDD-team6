@@ -29,4 +29,15 @@ public class ReservationService {
 		// 좌석 정보 조회 api를 통해 좌석 정보 확인후 예약쪽 정보에 update
 		return null;
 	}
+
+	@Transactional
+	public void confirmReservation() {
+		// 예약 정보 조회 및 상태 확인 (PENDING 상태여야 확정 가능)
+
+		// 결제 완료 여부 확인 (Payment API 조회)
+
+		// 예약 확정 처리 (status를 CONFIRMED로 변경)
+
+		// 예약 확정 이벤트 발행 (항공권 발급, 알림 전송 이벤트)
+	}
 }

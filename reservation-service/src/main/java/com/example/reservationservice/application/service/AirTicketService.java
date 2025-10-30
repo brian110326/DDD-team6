@@ -19,7 +19,6 @@ public class AirTicketService {
 		// 예약 정보 조회 및 상태 확인 (CONFIRMED 상태여야 발행 가능)
 
 		// 결제 완료 여부 확인 (결제 API 조회 또는 Payment Aggregate 확인)
-
 		// 승객 정보 입력 받아서 항공권 발행
 
 		// 항공권 발행 이벤트 발행 (탑승권 생성 트리거)
