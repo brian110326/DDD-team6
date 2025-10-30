@@ -4,14 +4,11 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.reservationservice.domain.reservation.vo.*;
 import org.springframework.data.domain.AbstractAggregateRoot;
 
 import com.example.reservationservice.domain.airticket.vo.SeatId;
-import com.example.reservationservice.domain.reservation.vo.ContactInfo;
 import com.example.reservationservice.domain.airticket.vo.FlightOperationId;
-import com.example.reservationservice.domain.reservation.vo.Money;
-import com.example.reservationservice.domain.reservation.vo.ReservationNumber;
-import com.example.reservationservice.domain.reservation.vo.SeatSelection;
 
 import jakarta.persistence.AttributeOverride;
 import jakarta.persistence.AttributeOverrides;

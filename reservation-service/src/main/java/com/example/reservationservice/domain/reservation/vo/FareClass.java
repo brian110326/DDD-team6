@@ -1,4 +1,4 @@
-package com.example.reservationservice.domain.reservation;
+package com.example.reservationservice.domain.reservation.vo;
 
 public enum FareClass {
 	PROMOTIONAL("프로모션 운임", 0.5),      // 50% 적립

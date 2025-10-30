@@ -1,4 +1,4 @@
-package com.example.reservationservice.domain.reservation;
+package com.example.reservationservice.domain.reservation.vo;
 
 public enum SpecialServiceType {
 	WHEELCHAIR("휠체어", false, 0),

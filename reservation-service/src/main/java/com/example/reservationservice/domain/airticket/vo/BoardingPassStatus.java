@@ -1,4 +1,4 @@
-package com.example.reservationservice.domain.airticket;
+package com.example.reservationservice.domain.airticket.vo;
 
 public enum BoardingPassStatus {
 	ISSUED,    // 발급됨

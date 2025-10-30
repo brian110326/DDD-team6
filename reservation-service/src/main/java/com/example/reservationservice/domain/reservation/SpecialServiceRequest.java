@@ -2,6 +2,7 @@ package com.example.reservationservice.domain.reservation;
 
 import java.time.LocalDateTime;
 
+import com.example.reservationservice.domain.reservation.vo.SpecialServiceType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

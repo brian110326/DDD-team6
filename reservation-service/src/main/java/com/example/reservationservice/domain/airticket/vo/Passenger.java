@@ -2,8 +2,6 @@ package com.example.reservationservice.domain.airticket.vo;
 
 import java.time.LocalDate;
 
-import com.example.reservationservice.domain.airticket.PassengerGender;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.Embedded;

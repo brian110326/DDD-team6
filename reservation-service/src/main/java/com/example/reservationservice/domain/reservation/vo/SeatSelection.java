@@ -3,8 +3,6 @@ package com.example.reservationservice.domain.reservation.vo;
 import java.time.LocalDateTime;
 
 import com.example.reservationservice.domain.airticket.vo.SeatId;
-import com.example.reservationservice.domain.reservation.SeatSelectionMethod;
-import com.example.reservationservice.domain.reservation.SeatType;
 
 import jakarta.persistence.AttributeOverride;
 import jakarta.persistence.AttributeOverrides;

@@ -1,4 +1,4 @@
-package com.example.reservationservice.domain.reservation;
+package com.example.reservationservice.domain.reservation.vo;
 
 public enum SeatSelectionMethod {
 	PAID_PRE_SELECT("유료 사전 선택"),

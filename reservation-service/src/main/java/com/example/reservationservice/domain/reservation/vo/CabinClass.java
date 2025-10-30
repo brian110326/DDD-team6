@@ -1,4 +1,4 @@
-package com.example.reservationservice.domain.reservation;
+package com.example.reservationservice.domain.reservation.vo;
 
 public enum CabinClass {
 	ECONOMY,       // 이코노미

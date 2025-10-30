@@ -1,8 +1,6 @@
-package com.example.reservationservice.domain.reservation;
+package com.example.reservationservice.domain.reservation.vo;
 
 import java.math.BigDecimal;
-
-import com.example.reservationservice.domain.reservation.vo.Money;
 
 public enum SeatType {
 	EMERGENCY_EXIT("비상구 좌석", Money.of(new BigDecimal("15000"), "KRW")),

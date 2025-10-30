@@ -1,4 +1,4 @@
-package com.example.reservationservice.domain.reservation;
+package com.example.reservationservice.domain.reservation.vo;
 
 public enum ReservationStatus {
 	PENDING,      // 결제 대기 중
