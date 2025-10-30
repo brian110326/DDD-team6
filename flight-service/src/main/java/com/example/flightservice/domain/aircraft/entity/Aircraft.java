@@ -4,9 +4,12 @@ import java.util.List;
 
 import org.springframework.data.domain.AbstractAggregateRoot;
 
+import com.example.flightservice.domain.aircraft.vo.AircraftModel;
 import com.example.flightservice.domain.aircraft.vo.SeatNumber;
 
+import jakarta.persistence.AttributeOverride;
 import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -32,13 +35,16 @@ public class Aircraft extends AbstractAggregateRoot<Aircraft> {
 	@Column(name = "aircraftId")
 	private Long id;
 
-	private String model;
+	@Embedded
+	@AttributeOverride(name = "name", column = @Column(name = "aircraft_model"))
+	private AircraftModel aircraftModel;
 	private int capacity;
+	private int remainingSeats;
 
 	private List<Seat> seats;
 
-	public Aircraft(String model, int capacity) {
-		this.model = model;
+	public Aircraft(AircraftModel aircraftModel, int capacity) {
+		this.aircraftModel = aircraftModel;
 		this.capacity = capacity;
 	}
 
@@ -46,6 +52,14 @@ public class Aircraft extends AbstractAggregateRoot<Aircraft> {
 		return seats.stream()
 			.filter(s -> s.getSeatNumber().equals(seatNumber))
 			.noneMatch(Seat::isReserved);
+	}
+
+	public void decreaseSeat() {
+		if (remainingSeats <= 0) {
+			throw new IllegalArgumentException("좌석이 모두 매진되었습니다.");
+		}
+
+		this.remainingSeats--;
 	}
 
 }
